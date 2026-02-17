@@ -207,6 +207,7 @@ export default function SparkleanLanding() {
                     src={service.image}
                     alt={service.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                    loading="lazy"
                   />
                 </div>
                 <div className="p-6">
@@ -280,6 +281,7 @@ export default function SparkleanLanding() {
                 src="/img/full-shot-people-cleaning-office.jpg"
                 alt="Professional Team"
                 className="rounded-3xl shadow-2xl border-4 border-green-100"
+                loading="lazy"
               />
             </div>
             <div className="order-1 md:order-2">
