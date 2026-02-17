@@ -3,19 +3,34 @@ import { Link } from 'react-router-dom';
 import { Sparkles, Home, Building2, Wand2, TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
 
 export default function SparkleanLanding() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
-  });
+
+  const [formResult, setFormResult] = useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setFormResult("Sending....");
+    const formData = new FormData(event.target);
+    formData.append("access_key", "9406abf5-896d-446b-8883-15bfa63498e4");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if (data.success) {
+      setFormResult("success");
+      event.target.reset();
+    } else {
+      setFormResult("error");
+    }
+  };
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
   const testimonials = [
     {
-      name: "Adrian Arguello",
+      name: "Joseph Reynolds",
       text: "They are wonderful! The team was professional, thorough, and left my home sparkling clean. I couldn't be happier with the service!",
       rating: 5,
     },
@@ -81,15 +96,6 @@ export default function SparkleanLanding() {
     "Insured & Bonded"
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    alert('Thank you for your inquiry! We will contact you soon.');
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
   return (
     <div className="min-h-screen bg-white">
@@ -390,71 +396,90 @@ export default function SparkleanLanding() {
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <form onSubmit={handleSubmit} className="space-y-6 bg-white p-8 rounded-2xl shadow-xl border-2 border-green-100">
+              <form
+                onSubmit={onSubmit}
+                className="space-y-6 bg-white p-8 rounded-2xl shadow-xl border-2 border-green-100"
+              >
+                <input type="hidden" name="subject" value="Nueva solicitud de cotización - Sparklean" />
+                <input type="hidden" name="from_name" value="Sparklean Website" />
+
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">Name</label>
                   <input
                     type="text"
                     name="name"
-                    value={formData.name}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
                   />
                 </div>
+
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
-                    value={formData.email}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
                   />
                 </div>
+
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">Phone</label>
                   <input
                     type="tel"
                     name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
                   />
                 </div>
+
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">Service Needed</label>
                   <select
                     name="service"
-                    value={formData.service}
-                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
                   >
                     <option value="">Select a service</option>
-                    <option value="residential">Residential Cleaning</option>
-                    <option value="commercial">Commercial Cleaning</option>
-                    <option value="deep">Deep Cleaning</option>
-                    <option value="move">Move-In/Move-Out</option>
+                    <option value="Residential Cleaning">Residential Cleaning</option>
+                    <option value="Commercial Cleaning">Commercial Cleaning</option>
+                    <option value="Deep Cleaning">Deep Cleaning</option>
+                    <option value="Move-In/Move-Out">Move-In/Move-Out</option>
                   </select>
                 </div>
+
                 <div>
                   <label className="block text-gray-700 font-semibold mb-2">Message</label>
                   <textarea
                     name="message"
-                    value={formData.message}
-                    onChange={handleChange}
                     rows="4"
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
                   ></textarea>
                 </div>
+
+                {/* Success/Error messages */}
+                {formResult === "success" && (
+                  <div className="bg-green-50 border-2 border-green-200 text-green-700 px-4 py-3 rounded-lg text-center font-medium">
+                    ✅ Message sent successfully! We'll contact you soon.
+                  </div>
+                )}
+                {formResult === "error" && (
+                  <div className="bg-red-50 border-2 border-red-200 text-red-700 px-4 py-3 rounded-lg text-center font-medium">
+                    ❌ Something went wrong. Please try again.
+                  </div>
+                )}
+                {formResult === "Sending...." && (
+                  <div className="bg-yellow-50 border-2 border-yellow-200 text-yellow-700 px-4 py-3 rounded-lg text-center font-medium">
+                    ⏳ Sending your message...
+                  </div>
+                )}
+
                 <button
                   type="submit"
-                  className="w-full bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition shadow-lg hover:shadow-xl"
+                  disabled={formResult === "Sending...."}
+                  className="w-full bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition shadow-lg hover:shadow-xl disabled:opacity-50"
                 >
-                  Request Quote
+                  {formResult === "Sending...." ? "Sending..." : "Request Quote"}
                 </button>
               </form>
             </div>

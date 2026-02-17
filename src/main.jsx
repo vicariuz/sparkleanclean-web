@@ -5,6 +5,7 @@ import './index.css'
 import App from './App.jsx'
 import Blog from './Blog.jsx'
 import BlogPost from './BlogPost.jsx'
+import ThankYou from './ThankYou.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         <Route path="/" element={<App />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/blog/:slug" element={<BlogPost />} />
+        <Route path="/gracias" element={<ThankYou />} /> 
       </Routes>
     </BrowserRouter>
   </StrictMode>,
