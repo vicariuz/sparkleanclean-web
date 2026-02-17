@@ -170,7 +170,7 @@ export default function SparkleanLanding() {
                       <Star key={i} className="w-5 h-5 fill-current" />
                     ))}
                   </div>
-                  <p className="text-sm text-green-100">Trusted by 500+ happy customers</p>
+                  <p className="text-sm text-green-100">Lafayette's Newest Premium Cleaning Service</p>
                 </div>
               </div>
             </div>
