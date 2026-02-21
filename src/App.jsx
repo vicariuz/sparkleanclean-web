@@ -82,6 +82,8 @@ export default function SparkleanLanding() {
       title: "Move-In/Move-Out Cleaning",
       description: "Complete cleaning services for your moving transitions in Lafayette and surrounding areas.",
       image: "/img/move-out-cleaning-lafayette-louisiana.webp",
+      width:"400",  
+      height:"300",
       alt: "Move-in move-out cleaning service Lafayette LA - professional moving transition cleaning"
     }
   ];
@@ -142,6 +144,7 @@ export default function SparkleanLanding() {
           <div className="absolute inset-0" style={{
             backgroundImage: `url('/img/office-cleaning-service-background.webp')`,
             backgroundSize: 'cover',
+            fetchpriority:"high",
             backgroundPosition: 'center'
           }}></div>
         </div>
