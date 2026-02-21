@@ -128,7 +128,7 @@ export default function SparkleanLanding() {
                 src="/img/sparklean-cleaning-logo-lafayette.webp"
                 alt="Sparklean Cleaning Services - Professional Cleaning Lafayette LA"
                 title="Sparklean Cleaning Services Lafayette Louisiana"
-                width="160"
+                width="267"
                 height="64"
                 className="h-16 w-auto"
                 fetchPriority="high"
@@ -698,6 +698,8 @@ export default function SparkleanLanding() {
                 alt="Sparklean Cleaning Services Lafayette Louisiana logo"
                 title="Sparklean Professional Cleaning Lafayette"
                 className="h-16 w-auto mb-4"
+                width="267"
+                height="64"
                 loading="lazy"
               />
               <p className="text-gray-400">
