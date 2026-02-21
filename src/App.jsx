@@ -61,6 +61,8 @@ export default function SparkleanLanding() {
       title: "Residential House Cleaning",
       description: "Professional home cleaning services in Lafayette, LA. Keep your house sparkling clean with our thorough residential cleaning.",
       image: "/img/residential-cleaning-lafayette-la.webp",
+      width:"800",  
+      height:"600",
       alt: "Professional residential house cleaning service in Lafayette Louisiana with eco-friendly products"
     },
     {
@@ -68,6 +70,8 @@ export default function SparkleanLanding() {
       title: "Commercial Office Cleaning",
       description: "Professional office cleaning solutions for Lafayette businesses and commercial spaces. Reliable and affordable.",
       image: "/img/commercial-office-cleaning-lafayette.webp",
+      width:"800",  
+      height:"600",
       alt: "Commercial office cleaning services for businesses in Lafayette LA"
     },
     {
@@ -75,6 +79,8 @@ export default function SparkleanLanding() {
       title: "Deep Cleaning Service",
       description: "Intensive deep cleaning that reaches every corner and surface of your Lafayette home or business.",
       image: "/img/deep-cleaning-service-lafayette.webp",
+      width:"800",  
+      height:"600",
       alt: "Deep cleaning service Lafayette Louisiana - thorough home and office cleaning"
     },
     {
@@ -82,8 +88,8 @@ export default function SparkleanLanding() {
       title: "Move-In/Move-Out Cleaning",
       description: "Complete cleaning services for your moving transitions in Lafayette and surrounding areas.",
       image: "/img/move-out-cleaning-lafayette-louisiana.webp",
-      width:"400",  
-      height:"300",
+      width:"800",  
+      height:"600",
       alt: "Move-in move-out cleaning service Lafayette LA - professional moving transition cleaning"
     }
   ];
@@ -145,6 +151,8 @@ export default function SparkleanLanding() {
             backgroundImage: `url('/img/office-cleaning-service-background.webp')`,
             backgroundSize: 'cover',
             fetchpriority:"high",
+            width:"1920",
+            height:"1080",
             backgroundPosition: 'center'
           }}></div>
         </div>
@@ -367,84 +375,87 @@ export default function SparkleanLanding() {
         </div>
       </section>
 
-      {/* Testimonials Section */}
-      <section className="py-20 bg-gradient-to-br from-green-50 via-white to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Lafayette Customers Say</h2>
-            <p className="text-xl text-gray-600">Don't just take our word for it - hear from our happy customers!</p>
+     {/* Testimonials Section */}
+<section className="py-20 bg-gradient-to-br from-green-50 via-white to-green-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Lafayette Customers Say</h2>
+      <p className="text-xl text-gray-600">Don't just take our word for it - hear from our happy customers!</p>
+    </div>
+
+    <div className="max-w-4xl mx-auto">
+      <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-green-100 relative">
+        {/* Large quote icon */}
+        <div className="absolute top-8 left-8 text-green-200 opacity-50">
+          <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 32 32">
+            <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2h2V8h-2zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2h2V8h-2z" />
+          </svg>
+        </div>
+
+        {/* Testimonial content */}
+        <div className="relative z-10 text-center">
+          <div className="mb-6">
+            <div className="flex justify-center mb-4">
+              {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
+                <Star key={i} className="w-8 h-8 text-yellow-500 fill-current" />
+              ))}
+            </div>
+            <p className="text-2xl text-gray-800 italic leading-relaxed mb-8">
+              "{testimonials[currentTestimonial].text}"
+            </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white rounded-3xl shadow-2xl p-12 border-2 border-green-100 relative">
-              {/* Large quote icon */}
-              <div className="absolute top-8 left-8 text-green-200 opacity-50">
-                <svg className="w-16 h-16" fill="currentColor" viewBox="0 0 32 32">
-                  <path d="M10 8c-3.3 0-6 2.7-6 6v10h10V14H8c0-1.1.9-2 2-2h2V8h-2zm12 0c-3.3 0-6 2.7-6 6v10h10V14h-6c0-1.1.9-2 2-2h2V8h-2z" />
-                </svg>
-              </div>
-
-              {/* Testimonial content */}
-              <div className="relative z-10 text-center">
-                <div className="mb-6">
-                  <div className="flex justify-center mb-4">
-                    {[...Array(testimonials[currentTestimonial].rating)].map((_, i) => (
-                      <Star key={i} className="w-8 h-8 text-yellow-400 fill-current" />
-                    ))}
-                  </div>
-                  <p className="text-2xl text-gray-800 italic leading-relaxed mb-8">
-                    "{testimonials[currentTestimonial].text}"
-                  </p>
-                </div>
-
-                <div className="flex items-center justify-center space-x-4">
-                  <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center text-white text-2xl font-bold">
-                    {testimonials[currentTestimonial].name.charAt(0)}
-                  </div>
-                  <div className="text-left">
-                    <p className="text-xl font-bold text-gray-900">{testimonials[currentTestimonial].name}</p>
-                    <p className="text-green-600 font-medium">Verified Customer</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Navigation arrows */}
-              <button
-                onClick={prevTestimonial}
-                className="absolute left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-green-50 text-green-600 rounded-full p-3 shadow-lg transition"
-                aria-label="Previous testimonial"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-              </button>
-
-              <button
-                onClick={nextTestimonial}
-                className="absolute right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-green-50 text-green-600 rounded-full p-3 shadow-lg transition"
-                aria-label="Next testimonial"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-
-              {/* Dots indicator */}
-              <div className="flex justify-center space-x-2 mt-8">
-                {testimonials.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTestimonial(index)}
-                    className={`w-3 h-3 rounded-full transition ${index === currentTestimonial ? 'bg-green-600 w-8' : 'bg-gray-300'
-                      }`}
-                    aria-label={`Go to testimonial ${index + 1}`}
-                  />
-                ))}
-              </div>
+          <div className="flex items-center justify-center space-x-4">
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-green-600 to-green-800 flex items-center justify-center text-white text-2xl font-bold">
+              {testimonials[currentTestimonial].name.charAt(0)}
+            </div>
+            <div className="text-left">
+              <p className="text-xl font-bold text-gray-900">{testimonials[currentTestimonial].name}</p>
+              {/* CAMBIO: text-green-700 para mejor contraste */}
+              <p className="text-green-700 font-bold">Verified Customer</p>
             </div>
           </div>
         </div>
-      </section>
+
+      
+        <button
+          onClick={prevTestimonial}
+          className="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white hover:bg-green-50 text-green-700 rounded-full p-4 shadow-lg transition border border-gray-100"
+          aria-label="Previous testimonial"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button
+          onClick={nextTestimonial}
+          className="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white hover:bg-green-50 text-green-700 rounded-full p-4 shadow-lg transition border border-gray-100"
+          aria-label="Next testimonial"
+        >
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+
+        <div className="flex justify-center space-x-4 mt-8">
+          {testimonials.map((_, index) => (
+            <button
+              key={index}
+              onClick={() => setCurrentTestimonial(index)}
+              className="p-3 focus:outline-none group"
+              aria-label={`Go to testimonial ${index + 1}`}
+            >
+              <div className={`h-3 rounded-full transition-all duration-300 ${
+                index === currentTestimonial ? 'bg-green-700 w-8' : 'bg-gray-300 w-3 group-hover:bg-gray-400'
+              }`} />
+            </button>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Contact Section */}
 <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
