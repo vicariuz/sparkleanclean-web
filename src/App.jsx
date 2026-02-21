@@ -289,9 +289,9 @@ export default function SparkleanLanding() {
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen=""
-                  loading="lazy"
+                  loading="lazy"  
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Sparklean Cleaning Service Area Map - Lafayette Louisiana and surrounding cities"
+                  title="Lafayette Service Area Map"
                 ></iframe>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-green-800 text-white rounded-2xl p-6 shadow-xl max-w-xs">
