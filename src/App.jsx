@@ -58,27 +58,31 @@ export default function SparkleanLanding() {
   const services = [
     {
       icon: <Home className="w-8 h-8" />,
-      title: "Residential Cleaning",
-      description: "Keep your home sparkling with our thorough residential cleaning services.",
-      image: "/img/pexels-karolina-grabowska-4239146.jpg"
+      title: "Residential House Cleaning",
+      description: "Professional home cleaning services in Lafayette, LA. Keep your house sparkling clean with our thorough residential cleaning.",
+      image: "/img/residential-cleaning-lafayette-la.jpg",
+      alt: "Professional residential house cleaning service in Lafayette Louisiana with eco-friendly products"
     },
     {
       icon: <Building2 className="w-8 h-8" />,
-      title: "Commercial Cleaning",
-      description: "Professional cleaning solutions for offices and commercial spaces.",
-      image: "/img/full-shot-people-cleaning-office.jpg"
+      title: "Commercial Office Cleaning",
+      description: "Professional office cleaning solutions for Lafayette businesses and commercial spaces. Reliable and affordable.",
+      image: "/img/commercial-office-cleaning-lafayette.jpg",
+      alt: "Commercial office cleaning services for businesses in Lafayette LA"
     },
     {
       icon: <Wand2 className="w-8 h-8" />,
-      title: "Deep Cleaning",
-      description: "Intensive cleaning that reaches every corner and surface of your space.",
-      image: "/img/pexels-karolina-grabowska-4239139.jpg"
+      title: "Deep Cleaning Service",
+      description: "Intensive deep cleaning that reaches every corner and surface of your Lafayette home or business.",
+      image: "/img/deep-cleaning-service-lafayette.jpg",
+      alt: "Deep cleaning service Lafayette Louisiana - thorough home and office cleaning"
     },
     {
       icon: <TruckIcon className="w-8 h-8" />,
-      title: "Move-In/Move-Out",
-      description: "Complete cleaning services for your moving transitions.",
-      image: "/img/professional-cleaning-service-person-using-steam-cleaner-office.jpg"
+      title: "Move-In/Move-Out Cleaning",
+      description: "Complete cleaning services for your moving transitions in Lafayette and surrounding areas.",
+      image: "/img/move-out-cleaning-lafayette-louisiana.jpg",
+      alt: "Move-in move-out cleaning service Lafayette LA - professional moving transition cleaning"
     }
   ];
 
@@ -113,8 +117,9 @@ export default function SparkleanLanding() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <img
-                src="/img/logo3.png"
-                alt="Sparklean Logo"
+                src="/img/sparklean-cleaning-logo-lafayette.png"
+                alt="Sparklean Cleaning Services - Professional Cleaning Lafayette LA"
+                title="Sparklean Cleaning Services Lafayette Louisiana"
                 className="h-16 w-auto"
               />
             </div>
@@ -135,7 +140,7 @@ export default function SparkleanLanding() {
         <div className="absolute inset-0 bg-gradient-to-br from-green-600/90 via-green-700/90 to-green-800/90"></div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url('/img/person-taking-care-office-cleaning.jpg')`,
+            backgroundImage: `url('/img/office-cleaning-service-background.jpg')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}></div>
@@ -151,7 +156,7 @@ export default function SparkleanLanding() {
                 </div>
               </div>
               <h1 className="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-                Your Space, <span className="text-green-200">Sparkling Clean</span>
+                Professional Cleaning Services in <span className="text-green-200">Lafayette, LA</span>
               </h1>
               <p className="text-xl text-green-50 mb-8 leading-relaxed">
                 Professional cleaning services that transform your home or business into a pristine environment. Quality you can trust, cleanliness you can see.
@@ -182,8 +187,9 @@ export default function SparkleanLanding() {
             </div>
             <div className="hidden md:block">
               <img
-                src="/img/pexels-karolina-grabowska-4239131.jpg"
-                alt="Professional Cleaning"
+                src="/img/professional-house-cleaning-lafayette.jpg"
+                alt="Professional house cleaning service in Lafayette Louisiana - residential cleaning"
+                title="Affordable residential cleaning services Lafayette LA"
                 className="rounded-3xl shadow-2xl border-4 border-white/20"
               />
             </div>
@@ -202,7 +208,7 @@ export default function SparkleanLanding() {
       <section id="services" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Services</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Our Cleaning Services in Lafayette</h2>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">Comprehensive cleaning solutions tailored to your needs</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -211,7 +217,8 @@ export default function SparkleanLanding() {
                 <div className="h-48 overflow-hidden bg-gradient-to-br from-green-50 to-green-100">
                   <img
                     src={service.image}
-                    alt={service.title}
+                    alt={service.alt}
+                    title={service.title + " Lafayette Louisiana"}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -266,12 +273,60 @@ export default function SparkleanLanding() {
                   allowFullScreen=""
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Lafayette Service Area Map"
+                  title="Sparklean Cleaning Service Area Map - Lafayette Louisiana and surrounding cities"
                 ></iframe>
               </div>
               <div className="absolute -bottom-6 -right-6 bg-green-600 text-white rounded-2xl p-6 shadow-xl max-w-xs">
                 <p className="font-bold text-lg mb-1">Central Lafayette Location</p>
                 <p className="text-green-100 text-sm">Fast response times across all service areas</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Local SEO Content Section */}
+      <section className="py-20 bg-gradient-to-br from-white via-green-50/30 to-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-3xl shadow-xl p-10 md:p-12 border-2 border-green-100">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8 text-center">
+              Professional Cleaning Services Throughout Lafayette & Acadiana
+            </h2>
+            
+            <div className="space-y-6 text-gray-700 leading-relaxed">
+              <p className="text-lg">
+                <span className="font-bold text-green-600">Sparklean Cleaning Services</span> is Lafayette, Louisiana's trusted choice for professional residential and commercial cleaning. Whether you need house cleaning in Scott, office cleaning in Youngsville, or deep cleaning services in Broussard, our experienced team delivers exceptional results every time.
+              </p>
+              
+              <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
+                <p className="text-lg">
+                  We proudly serve the entire Acadiana region, including <span className="font-semibold">Lafayette, Scott, Youngsville, Broussard, Carencro, Duson, Maurice, Breaux Bridge, St. Martinville, and Cade</span>. As a locally owned cleaning company, we understand the unique challenges of Louisiana homes and businesses – from high humidity to seasonal pollen and everything in between.
+                </p>
+              </div>
+              
+              <p className="text-lg">
+                Our eco-friendly cleaning products are tough on dirt but safe for your family, pets, and the beautiful Louisiana environment we all love. We offer flexible scheduling, competitive pricing, and a 100% satisfaction guarantee on every job.
+              </p>
+              
+              <div className="bg-gradient-to-r from-green-600 to-green-700 rounded-xl p-8 text-white text-center mt-8">
+                <p className="text-xl mb-4">
+                  Looking for reliable maid service in Lafayette? Need move-out cleaning before your lease ends? Or perhaps your office needs professional commercial cleaning?
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <a 
+                    href="tel:3375540468" 
+                    className="bg-white text-green-700 px-8 py-3 rounded-lg font-bold text-lg hover:bg-green-50 transition shadow-lg inline-flex items-center space-x-2"
+                  >
+                    <Phone className="w-5 h-5" />
+                    <span>(337) 554-0468</span>
+                  </a>
+                  <a 
+                    href="#contact" 
+                    className="border-2 border-white text-white px-8 py-3 rounded-lg font-bold text-lg hover:bg-green-600 transition"
+                  >
+                    Get Free Quote
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -284,8 +339,9 @@ export default function SparkleanLanding() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img
-                src="/img/full-shot-people-cleaning-office.jpg"
-                alt="Professional Team"
+                src="/img/commercial-office-cleaning-lafayette.jpg"
+                alt="Professional cleaning team cleaning office in Lafayette Louisiana"
+                title="Experienced commercial cleaning team Lafayette LA"
                 className="rounded-3xl shadow-2xl border-4 border-green-100"
                 loading="lazy"
               />
@@ -312,7 +368,7 @@ export default function SparkleanLanding() {
       <section className="py-20 bg-gradient-to-br from-green-50 via-white to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Customers Say</h2>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">What Our Lafayette Customers Say</h2>
             <p className="text-xl text-gray-600">Don't just take our word for it - hear from our happy customers!</p>
           </div>
 
@@ -391,8 +447,8 @@ export default function SparkleanLanding() {
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get Your Free Quote</h2>
-            <p className="text-xl text-gray-600">Let's make your space sparkle! Reach out today.</p>
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get Your Free Cleaning Quote</h2>
+            <p className="text-xl text-gray-600">Let's make your Lafayette space sparkle! Reach out today.</p>
           </div>
           <div className="grid md:grid-cols-2 gap-12">
             <div>
@@ -547,15 +603,73 @@ export default function SparkleanLanding() {
         </div>
       </section>
 
+      {/* FAQ Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-6">
+            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                How much does house cleaning cost in Lafayette, LA?
+              </h3>
+              <p className="text-gray-700">
+                Our residential cleaning services in Lafayette start at competitive rates based on home size and cleaning needs. Contact us at (337) 554-0468 for a free customized quote for your Lafayette home.
+              </p>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Do you serve areas outside Lafayette?
+              </h3>
+              <p className="text-gray-700">
+                Yes! Sparklean serves Lafayette, Scott, Youngsville, Broussard, Carencro, Duson, Maurice, Breaux Bridge, St. Martinville, and Cade in the Acadiana region.
+              </p>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                Are your cleaning products eco-friendly?
+              </h3>
+              <p className="text-gray-700">
+                Absolutely! All Sparklean cleaning products are eco-friendly, non-toxic, and safe for children, pets, and the Louisiana environment while being tough on dirt and bacteria.
+              </p>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                How do I schedule a cleaning service in Lafayette?
+              </h3>
+              <p className="text-gray-700">
+                Simply call us at (337) 554-0468, fill out our online quote form, or email contact@sparkleancleaners.com. We offer flexible scheduling including evenings and weekends.
+              </p>
+            </div>
+
+            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
+              <h3 className="text-xl font-bold text-gray-900 mb-3">
+                What's included in your deep cleaning service?
+              </h3>
+              <p className="text-gray-700">
+                Our Lafayette deep cleaning service includes thorough cleaning of all rooms, appliances, baseboards, windows, ceiling fans, inside cabinets, and hard-to-reach areas that regular cleaning might miss.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <img
-                src="/img/logo6.png"
-                alt="Sparklean Logo"
+                src="/img/sparklean-logo-white.png"
+                alt="Sparklean Cleaning Services Lafayette Louisiana logo"
+                title="Sparklean Professional Cleaning Lafayette"
                 className="h-16 w-auto mb-4"
+                loading="lazy"
               />
               <p className="text-gray-400">
                 Professional cleaning services serving Lafayette and surrounding areas.
@@ -580,7 +694,7 @@ export default function SparkleanLanding() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-400">© 2024 Sparklean Cleaning Services. All rights reserved.</p>
+            <p className="text-gray-400">© 2026 Sparklean Cleaning Services. All rights reserved.</p>
           </div>
         </div>
       </footer>
