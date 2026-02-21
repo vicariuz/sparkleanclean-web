@@ -60,28 +60,28 @@ export default function SparkleanLanding() {
       icon: <Home className="w-8 h-8" />,
       title: "Residential House Cleaning",
       description: "Professional home cleaning services in Lafayette, LA. Keep your house sparkling clean with our thorough residential cleaning.",
-      image: "/img/residential-cleaning-lafayette-la.jpg",
+      image: "/img/residential-cleaning-lafayette-la.webp",
       alt: "Professional residential house cleaning service in Lafayette Louisiana with eco-friendly products"
     },
     {
       icon: <Building2 className="w-8 h-8" />,
       title: "Commercial Office Cleaning",
       description: "Professional office cleaning solutions for Lafayette businesses and commercial spaces. Reliable and affordable.",
-      image: "/img/commercial-office-cleaning-lafayette.jpg",
+      image: "/img/commercial-office-cleaning-lafayette.webp",
       alt: "Commercial office cleaning services for businesses in Lafayette LA"
     },
     {
       icon: <Wand2 className="w-8 h-8" />,
       title: "Deep Cleaning Service",
       description: "Intensive deep cleaning that reaches every corner and surface of your Lafayette home or business.",
-      image: "/img/deep-cleaning-service-lafayette.jpg",
+      image: "/img/deep-cleaning-service-lafayette.webp",
       alt: "Deep cleaning service Lafayette Louisiana - thorough home and office cleaning"
     },
     {
       icon: <TruckIcon className="w-8 h-8" />,
       title: "Move-In/Move-Out Cleaning",
       description: "Complete cleaning services for your moving transitions in Lafayette and surrounding areas.",
-      image: "/img/move-out-cleaning-lafayette-louisiana.jpg",
+      image: "/img/move-out-cleaning-lafayette-louisiana.webp",
       alt: "Move-in move-out cleaning service Lafayette LA - professional moving transition cleaning"
     }
   ];
@@ -117,7 +117,7 @@ export default function SparkleanLanding() {
           <div className="flex justify-between items-center">
             <div className="flex items-center space-x-3">
               <img
-                src="/img/sparklean-cleaning-logo-lafayette.png"
+                src="/img/sparklean-cleaning-logo-lafayette.webp"
                 alt="Sparklean Cleaning Services - Professional Cleaning Lafayette LA"
                 title="Sparklean Cleaning Services Lafayette Louisiana"
                 className="h-16 w-auto"
@@ -140,7 +140,7 @@ export default function SparkleanLanding() {
         <div className="absolute inset-0 bg-gradient-to-br from-green-600/90 via-green-700/90 to-green-800/90"></div>
         <div className="absolute inset-0 opacity-20">
           <div className="absolute inset-0" style={{
-            backgroundImage: `url('/img/office-cleaning-service-background.jpg')`,
+            backgroundImage: `url('/img/office-cleaning-service-background.webp')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center'
           }}></div>
@@ -187,7 +187,7 @@ export default function SparkleanLanding() {
             </div>
             <div className="hidden md:block">
               <img
-                src="/img/professional-house-cleaning-lafayette.jpg"
+                src="/img/professional-house-cleaning-lafayette.webp"
                 alt="Professional house cleaning service in Lafayette Louisiana - residential cleaning"
                 title="Affordable residential cleaning services Lafayette LA"
                 className="rounded-3xl shadow-2xl border-4 border-white/20"
@@ -339,7 +339,7 @@ export default function SparkleanLanding() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="order-2 md:order-1">
               <img
-                src="/img/commercial-office-cleaning-lafayette.jpg"
+                src="/img/commercial-office-cleaning-lafayette.webp"
                 alt="Professional cleaning team cleaning office in Lafayette Louisiana"
                 title="Experienced commercial cleaning team Lafayette LA"
                 className="rounded-3xl shadow-2xl border-4 border-green-100"
@@ -444,164 +444,171 @@ export default function SparkleanLanding() {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get Your Free Cleaning Quote</h2>
-            <p className="text-xl text-gray-600">Let's make your Lafayette space sparkle! Reach out today.</p>
+<section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
+  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">Get Your Free Cleaning Quote</h2>
+      <p className="text-xl text-gray-600">Let's make your Lafayette space sparkle! Reach out today.</p>
+    </div>
+    <div className="grid md:grid-cols-2 gap-12">
+      <div>
+        <form
+          onSubmit={onSubmit}
+          className="space-y-6 bg-white p-8 rounded-2xl shadow-xl border-2 border-green-100"
+        >
+          <input type="hidden" name="subject" value="Nueva solicitud de cotización - Sparklean" />
+          <input type="hidden" name="from_name" value="Sparklean Website" />
+
+          <div>
+            <label htmlFor="form-name" className="block text-gray-700 font-semibold mb-2">Name</label>
+            <input
+              id="form-name"
+              type="text"
+              name="name"
+              required
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:outline-none transition"
+            />
           </div>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <form
-                onSubmit={onSubmit}
-                className="space-y-6 bg-white p-8 rounded-2xl shadow-xl border-2 border-green-100"
-              >
-                <input type="hidden" name="subject" value="Nueva solicitud de cotización - Sparklean" />
-                <input type="hidden" name="from_name" value="Sparklean Website" />
 
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Name</label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
-                  />
-                </div>
+          <div>
+            <label htmlFor="form-email" className="block text-gray-700 font-semibold mb-2">Email</label>
+            <input
+              id="form-email"
+              type="email"
+              name="email"
+              required
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:outline-none transition"
+            />
+          </div>
 
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Email</label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
-                  />
-                </div>
+          <div>
+            <label htmlFor="form-phone" className="block text-gray-700 font-semibold mb-2">Phone</label>
+            <input
+              id="form-phone"
+              type="tel"
+              name="phone"
+              required
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:outline-none transition"
+            />
+          </div>
 
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Phone</label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
-                  />
-                </div>
+          <div>
+            <label htmlFor="form-service" className="block text-gray-700 font-semibold mb-2">Service Needed</label>
+            <select
+              id="form-service"
+              name="service"
+              required
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:outline-none transition"
+            >
+              <option value="">Select a service</option>
+              <option value="Residential Cleaning">Residential Cleaning</option>
+              <option value="Commercial Cleaning">Commercial Cleaning</option>
+              <option value="Deep Cleaning">Deep Cleaning</option>
+              <option value="Move-In/Move-Out">Move-In/Move-Out</option>
+            </select>
+          </div>
 
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Service Needed</label>
-                  <select
-                    name="service"
-                    required
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
-                  >
-                    <option value="">Select a service</option>
-                    <option value="Residential Cleaning">Residential Cleaning</option>
-                    <option value="Commercial Cleaning">Commercial Cleaning</option>
-                    <option value="Deep Cleaning">Deep Cleaning</option>
-                    <option value="Move-In/Move-Out">Move-In/Move-Out</option>
-                  </select>
-                </div>
+          <div>
+            <label htmlFor="form-message" className="block text-gray-700 font-semibold mb-2">Message</label>
+            <textarea
+              id="form-message"
+              name="message"
+              rows="4"
+              className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:outline-none transition"
+            ></textarea>
+          </div>
 
-                <div>
-                  <label className="block text-gray-700 font-semibold mb-2">Message</label>
-                  <textarea
-                    name="message"
-                    rows="4"
-                    className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-500 focus:outline-none transition"
-                  ></textarea>
-                </div>
-
-                {/* Success/Error messages */}
-                {formResult === "success" && (
-                  <div className="bg-green-50 border-2 border-green-200 text-green-700 px-4 py-3 rounded-lg text-center font-medium">
-                    ✅ Message sent successfully! We'll contact you soon.
-                  </div>
-                )}
-                {formResult === "error" && (
-                  <div className="bg-red-50 border-2 border-red-200 text-red-700 px-4 py-3 rounded-lg text-center font-medium">
-                    ❌ Something went wrong. Please try again.
-                  </div>
-                )}
-                {formResult === "Sending...." && (
-                  <div className="bg-yellow-50 border-2 border-yellow-200 text-yellow-700 px-4 py-3 rounded-lg text-center font-medium">
-                    ⏳ Sending your message...
-                  </div>
-                )}
-
-                <button
-                  type="submit"
-                  disabled={formResult === "Sending...."}
-                  className="w-full bg-green-600 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-700 transition shadow-lg hover:shadow-xl disabled:opacity-50"
-                >
-                  {formResult === "Sending...." ? "Sending..." : "Request Quote"}
-                </button>
-              </form>
+          {/* Success/Error messages */}
+          {formResult === "success" && (
+            <div className="bg-green-50 border-2 border-green-200 text-green-800 px-4 py-3 rounded-lg text-center font-medium">
+              ✅ Message sent successfully! We'll contact you soon.
             </div>
-            <div className="space-y-6">
-              <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-green-100">
-                <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
-                <div className="space-y-6">
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <Phone className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="text-gray-600 text-sm font-medium">Call us</p>
-                      <a href="tel:3375540468" className="text-gray-900 font-bold text-xl hover:text-green-600 transition">
-                        (337) 554-0468
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <Mail className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="text-gray-600 text-sm font-medium">Email us</p>
-                      <a href="mailto:contact@sparkleancleaners.com" className="text-gray-900 font-bold text-lg hover:text-green-600 transition break-all">
-                        contact@sparkleancleaners.com
-                      </a>
-                    </div>
-                  </div>
-                  <div className="flex items-start space-x-4">
-                    <div className="bg-green-100 p-3 rounded-lg">
-                      <MapPin className="w-6 h-6 text-green-600" />
-                    </div>
-                    <div>
-                      <p className="text-gray-600 text-sm font-medium">Location</p>
-                      <p className="text-gray-900 font-bold text-lg">
-                        Lafayette, Louisiana
-                      </p>
-                    </div>
-                  </div>
-                </div>
+          )}
+          {formResult === "error" && (
+            <div className="bg-red-50 border-2 border-red-200 text-red-800 px-4 py-3 rounded-lg text-center font-medium">
+              ❌ Something went wrong. Please try again.
+            </div>
+          )}
+          {formResult === "Sending...." && (
+            <div className="bg-yellow-50 border-2 border-yellow-200 text-yellow-800 px-4 py-3 rounded-lg text-center font-medium">
+              ⏳ Sending your message...
+            </div>
+          )}
+
+          <button
+            type="submit"
+            disabled={formResult === "Sending...."}
+            className="w-full bg-green-700 text-white px-8 py-4 rounded-lg text-lg font-semibold hover:bg-green-800 transition shadow-lg hover:shadow-xl disabled:opacity-50"
+          >
+            {formResult === "Sending...." ? "Sending..." : "Request Quote"}
+          </button>
+        </form>
+      </div>
+
+      <div className="space-y-6">
+        <div className="bg-white rounded-2xl p-8 shadow-xl border-2 border-green-100">
+          <h3 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h3>
+          <div className="space-y-6">
+            <div className="flex items-start space-x-4">
+              <div className="bg-green-100 p-3 rounded-lg">
+                <Phone className="w-6 h-6 text-green-700" />
               </div>
-              <div className="bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 text-white shadow-xl">
-                <h3 className="text-2xl font-bold mb-6 flex items-center">
-                  <Clock className="w-6 h-6 mr-2" />
-                  Business Hours
-                </h3>
-                <div className="space-y-3">
-                  <div className="flex justify-between items-center border-b border-green-500/30 pb-3">
-                    <span className="font-medium">Monday - Friday:</span>
-                    <span className="font-bold">8:00 AM - 6:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center border-b border-green-500/30 pb-3">
-                    <span className="font-medium">Saturday:</span>
-                    <span className="font-bold">9:00 AM - 4:00 PM</span>
-                  </div>
-                  <div className="flex justify-between items-center">
-                    <span className="font-medium">Sunday:</span>
-                    <span className="font-bold">Closed</span>
-                  </div>
-                </div>
+              <div>
+                <p className="text-gray-600 text-sm font-medium">Call us</p>
+                <a href="tel:3375540468" className="text-gray-900 font-bold text-xl hover:text-green-700 transition">
+                  (337) 554-0468
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="bg-green-100 p-3 rounded-lg">
+                <Mail className="w-6 h-6 text-green-700" />
+              </div>
+              <div>
+                <p className="text-gray-600 text-sm font-medium">Email us</p>
+                <a href="mailto:contact@sparkleancleaners.com" className="text-gray-900 font-bold text-lg hover:text-green-700 transition break-all">
+                  contact@sparkleancleaners.com
+                </a>
+              </div>
+            </div>
+            <div className="flex items-start space-x-4">
+              <div className="bg-green-100 p-3 rounded-lg">
+                <MapPin className="w-6 h-6 text-green-700" />
+              </div>
+              <div>
+                <p className="text-gray-600 text-sm font-medium">Location</p>
+                <p className="text-gray-900 font-bold text-lg">
+                  Lafayette, Louisiana
+                </p>
               </div>
             </div>
           </div>
         </div>
-      </section>
+
+        <div className="bg-gradient-to-br from-green-700 to-green-800 rounded-2xl p-8 text-white shadow-xl">
+          <h3 className="text-2xl font-bold mb-6 flex items-center">
+            <Clock className="w-6 h-6 mr-2" />
+            Business Hours
+          </h3>
+          <div className="space-y-3">
+            <div className="flex justify-between items-center border-b border-green-500/30 pb-3">
+              <span className="font-medium">Monday - Friday:</span>
+              <span className="font-bold">8:00 AM - 6:00 PM</span>
+            </div>
+            <div className="flex justify-between items-center border-b border-green-500/30 pb-3">
+              <span className="font-medium">Saturday:</span>
+              <span className="font-bold">9:00 AM - 4:00 PM</span>
+            </div>
+            <div className="flex justify-between items-center">
+              <span className="font-medium">Sunday:</span>
+              <span className="font-bold">Closed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* FAQ Section */}
       <section className="py-20 bg-white">
@@ -665,7 +672,7 @@ export default function SparkleanLanding() {
           <div className="grid md:grid-cols-3 gap-8 mb-8">
             <div>
               <img
-                src="/img/sparklean-logo-white.png"
+                src="/img/sparklean-logo-white.webp"
                 alt="Sparklean Cleaning Services Lafayette Louisiana logo"
                 title="Sparklean Professional Cleaning Lafayette"
                 className="h-16 w-auto mb-4"
