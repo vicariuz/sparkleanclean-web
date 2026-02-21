@@ -12,7 +12,7 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/img/logo3.png" alt="Sparklean Logo" className="h-16 w-auto" />
+              <img src="/img/sparklean-cleaning-logo-lafayette.png" alt="Sparklean Logo" className="h-16 w-auto" />
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <Link to="/" className="text-gray-700 hover:text-green-600 transition font-medium">Home</Link>
