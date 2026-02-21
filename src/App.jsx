@@ -128,6 +128,8 @@ export default function SparkleanLanding() {
                 src="/img/sparklean-cleaning-logo-lafayette.webp"
                 alt="Sparklean Cleaning Services - Professional Cleaning Lafayette LA"
                 title="Sparklean Cleaning Services Lafayette Louisiana"
+                width="160" 
+                height="64"
                 className="h-16 w-auto"
               />
             </div>
@@ -153,6 +155,7 @@ export default function SparkleanLanding() {
             fetchpriority:"high",
             width:"1920",
             height:"1080",
+            loading:"eager",
             backgroundPosition: 'center'
           }}></div>
         </div>
@@ -269,7 +272,7 @@ export default function SparkleanLanding() {
                 </div>
                 <div className="mt-6 pt-6 border-t-2 border-gray-100">
                   <p className="text-gray-600">
-                    Don't see your area? <a href="#contact" className="text-green-600 font-semibold hover:text-green-700">Contact us</a> - we may still be able to help!
+                    Don't see your area? <a href="#contact" className="text-green-700 font-semibold hover:text-green-700">Contact us</a> - we may still be able to help!
                   </p>
                 </div>
               </div>
@@ -287,7 +290,7 @@ export default function SparkleanLanding() {
                   title="Sparklean Cleaning Service Area Map - Lafayette Louisiana and surrounding cities"
                 ></iframe>
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-green-600 text-white rounded-2xl p-6 shadow-xl max-w-xs">
+              <div className="absolute -bottom-6 -right-6 bg-green-800 text-white rounded-2xl p-6 shadow-xl max-w-xs">
                 <p className="font-bold text-lg mb-1">Central Lafayette Location</p>
                 <p className="text-green-100 text-sm">Fast response times across all service areas</p>
               </div>
@@ -306,7 +309,7 @@ export default function SparkleanLanding() {
             
             <div className="space-y-6 text-gray-700 leading-relaxed">
               <p className="text-lg">
-                <span className="font-bold text-green-600">Sparklean Cleaning Services</span> is Lafayette, Louisiana's trusted choice for professional residential and commercial cleaning. Whether you need house cleaning in Scott, office cleaning in Youngsville, or deep cleaning services in Broussard, our experienced team delivers exceptional results every time.
+                <span className="font-bold text-green-700">Sparklean Cleaning Services</span> is Lafayette, Louisiana's trusted choice for professional residential and commercial cleaning. Whether you need house cleaning in Scott, office cleaning in Youngsville, or deep cleaning services in Broussard, our experienced team delivers exceptional results every time.
               </p>
               
               <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
