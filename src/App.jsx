@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 import { Sparkles, Home, Building2, Wand2, TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
 
 export default function SparkleanLanding() {
@@ -63,6 +64,7 @@ export default function SparkleanLanding() {
       image: "/img/residential-cleaning-lafayette-la.webp",
       width: "800",
       height: "600",
+      link: "/residential-cleaning-lafayette",
       alt: "Professional residential house cleaning service in Lafayette Louisiana with eco-friendly products"
     },
     {
@@ -72,6 +74,7 @@ export default function SparkleanLanding() {
       image: "/img/commercial-office-cleaning-lafayette.webp",
       width: "800",
       height: "600",
+      link: "/commercial-cleaning-lafayette",
       alt: "Commercial office cleaning services for businesses in Lafayette LA"
     },
     {
@@ -81,6 +84,7 @@ export default function SparkleanLanding() {
       image: "/img/deep-cleaning-service-lafayette.webp",
       width: "800",
       height: "600",
+      link: "/deep-cleaning-lafayette",
       alt: "Deep cleaning service Lafayette Louisiana - thorough home and office cleaning"
     },
     {
@@ -90,6 +94,7 @@ export default function SparkleanLanding() {
       image: "/img/move-out-cleaning-lafayette-louisiana.webp",
       width: "800",
       height: "600",
+      link: "/move-out-cleaning-lafayette",
       alt: "Move-in move-out cleaning service Lafayette LA - professional moving transition cleaning"
     }
   ];
@@ -135,7 +140,40 @@ export default function SparkleanLanding() {
               />
             </div>
             <div className="hidden md:flex items-center space-x-6">
-              <a href="#services" className="text-gray-700 hover:text-green-600 transition font-medium">Services</a>
+              <div className="relative group">
+                <button className="flex items-center space-x-1 text-gray-700 hover:text-green-600 transition font-medium">
+                  <span>Services</span>
+                  <ChevronDown className="w-4 h-4" />
+                </button>
+                <div className="absolute top-full left-0 pt-2 invisible group-hover:visible">
+                  <div className="bg-white shadow-xl rounded-lg py-2 w-64 border-2 border-gray-100">
+                    <Link
+                      to="/residential-cleaning-lafayette"
+                      className="block px-6 py-3 hover:bg-green-50 transition text-gray-700 hover:text-green-600 font-medium"
+                    >
+                      Residential Cleaning
+                    </Link>
+                    <Link
+                      to="/commercial-cleaning-lafayette"
+                      className="block px-6 py-3 hover:bg-green-50 transition text-gray-700 hover:text-green-600 font-medium"
+                    >
+                      Commercial Cleaning
+                    </Link>
+                    <Link
+                      to="/deep-cleaning-lafayette"
+                      className="block px-6 py-3 hover:bg-green-50 transition text-gray-700 hover:text-green-600 font-medium"
+                    >
+                      Deep Cleaning
+                    </Link>
+                    <Link
+                      to="/move-out-cleaning-lafayette"
+                      className="block px-6 py-3 hover:bg-green-50 transition text-gray-700 hover:text-green-600 font-medium"
+                    >
+                      Move-In/Move-Out
+                    </Link>
+                  </div>
+                </div>
+              </div>
               <a href="#areas" className="text-gray-700 hover:text-green-600 transition font-medium">Service Areas</a>
               <a href="#about" className="text-gray-700 hover:text-green-600 transition font-medium">About</a>
               <Link to="/blog" className="text-gray-700 hover:text-green-600 transition font-medium">Blog</Link>
@@ -231,7 +269,7 @@ export default function SparkleanLanding() {
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-green-300">
+              <Link key={index} to={service.link} className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 border-2 border-gray-100 hover:border-green-300">
                 <div className="h-48 overflow-hidden bg-gradient-to-br from-green-50 to-green-100">
                   <img
                     src={service.image}
@@ -246,7 +284,7 @@ export default function SparkleanLanding() {
                   <h3 className="text-xl font-semibold text-gray-900 mb-3">{service.title}</h3>
                   <p className="text-gray-600">{service.description}</p>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -289,7 +327,7 @@ export default function SparkleanLanding() {
                   height="100%"
                   style={{ border: 0 }}
                   allowFullScreen=""
-                  loading="lazy"  
+                  loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
                   title="Lafayette Service Area Map"
                 ></iframe>
