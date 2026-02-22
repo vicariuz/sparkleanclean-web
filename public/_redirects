@@ -1,0 +1,6 @@
+# Redirigir de la versión sin www a la versión con www
+https://sparkleancleaners.com/* https://www.sparkleancleaners.com/:splat  301!
+
+# Forzar HTTPS en todo el sitio
+http://sparkleancleaners.com/* https://www.sparkleancleaners.com/:splat  301!
+http://www.sparkleancleaners.com/* https://www.sparkleancleaners.com/:splat  301!
