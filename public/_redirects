@@ -4,3 +4,6 @@ https://sparkleancleaners.com/* https://www.sparkleancleaners.com/:splat  301!
 # Forzar HTTPS en todo el sitio
 http://sparkleancleaners.com/* https://www.sparkleancleaners.com/:splat  301!
 http://www.sparkleancleaners.com/* https://www.sparkleancleaners.com/:splat  301!
+
+# React Router - ESTA ES LA LÍNEA CRÍTICA QUE FALTA
+/*    /index.html   200
