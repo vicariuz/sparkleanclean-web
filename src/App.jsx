@@ -23,11 +23,24 @@ export default function SparkleanLanding() {
     if (data.success) {
       setFormResult("success");
       event.target.reset();
+
+      // Notifica a Make.com
+      await fetch("https://hook.us2.make.com/oj109um5vbpjfb3sv9h3dojmefufa2g9", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: formData.get("name"),
+          email: formData.get("email"),
+          phone: formData.get("phone"),
+          service: formData.get("service"),
+          message: formData.get("message"),
+        })
+      });
+
     } else {
       setFormResult("error");
     }
   };
-
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
   const [quoteData, setQuoteData] = useState({ service: "", message: "" });
 
