@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import QuoteCalculator from './QuoteCalculator';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { Sparkles, Home, Building2, Wand2, TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
@@ -28,6 +29,7 @@ export default function SparkleanLanding() {
   };
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [quoteData, setQuoteData] = useState({ service: "", message: "" });
 
   const testimonials = [
     {
@@ -502,7 +504,7 @@ export default function SparkleanLanding() {
           </div>
         </div>
       </section>
-
+      <QuoteCalculator onBooking={(data) => setQuoteData(data)} />
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -558,6 +560,8 @@ export default function SparkleanLanding() {
                     id="form-service"
                     name="service"
                     required
+                    value={quoteData.service}
+                    onChange={(e) => setQuoteData(prev => ({ ...prev, service: e.target.value }))}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:outline-none transition"
                   >
                     <option value="">Select a service</option>
@@ -574,6 +578,8 @@ export default function SparkleanLanding() {
                     id="form-message"
                     name="message"
                     rows="4"
+                    value={quoteData.message}
+                    onChange={(e) => setQuoteData(prev => ({ ...prev, message: e.target.value }))}
                     className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-green-600 focus:outline-none transition"
                   ></textarea>
                 </div>
