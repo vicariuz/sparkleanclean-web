@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import QuoteCalculator from './QuoteCalculator';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { Sparkles, Home, Building2, Wand2, TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
 import Seo from './Seo';
@@ -32,6 +32,14 @@ const faqs = [
 export default function SparkleanLanding() {
 
   const [formResult, setFormResult] = useState("");
+
+  // Scroll to /#section links coming from other pages (the page is lazy-loaded, so the browser can't do it natively).
+  const { hash } = useLocation();
+  useEffect(() => {
+    if (!hash) return;
+    const t = setTimeout(() => document.querySelector(hash)?.scrollIntoView({ behavior: "smooth" }), 150);
+    return () => clearTimeout(t);
+  }, [hash]);
 
   const onSubmit = async (event) => {
     event.preventDefault();

@@ -59,7 +59,6 @@ export default function CommercialCleaning() {
           path: "/commercial-cleaning-lafayette",
           image: "/img/commercial-office-cleaning-lafayette.webp",
         })}
-        image="/img/commercial-office-cleaning-lafayette.webp"
       />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">

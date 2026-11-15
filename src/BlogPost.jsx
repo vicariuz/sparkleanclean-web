@@ -34,7 +34,6 @@ export default function BlogPost() {
         title={seoTitle}
         description={post.excerpt}
         path={`/blog/${post.slug}`}
-        image={post.image}
         type="article"
         schema={blogPostingSchema(post)}
       />

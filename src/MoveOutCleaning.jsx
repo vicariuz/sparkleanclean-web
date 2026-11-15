@@ -63,7 +63,6 @@ export default function MoveOutCleaning() {
           path: "/move-out-cleaning-lafayette",
           image: "/img/move-out-cleaning-lafayette-louisiana.webp",
         })}
-        image="/img/move-out-cleaning-lafayette-louisiana.webp"
       />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">

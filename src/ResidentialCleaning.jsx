@@ -59,7 +59,6 @@ export default function ResidentialCleaning() {
           path: "/residential-cleaning-lafayette",
           image: "/img/residential-cleaning-lafayette-la.webp",
         })}
-        image="/img/residential-cleaning-lafayette-la.webp"
       />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">

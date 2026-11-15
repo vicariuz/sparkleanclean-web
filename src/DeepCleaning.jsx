@@ -63,7 +63,6 @@ export default function DeepCleaning() {
           path: "/deep-cleaning-lafayette",
           image: "/img/deep-cleaning-service-lafayette.webp",
         })}
-        image="/img/deep-cleaning-service-lafayette.webp"
       />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">

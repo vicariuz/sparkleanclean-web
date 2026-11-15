@@ -2,19 +2,19 @@
 // anywhere in the tree into <head>, and removes them when the component
 // unmounts, so no helmet-style dependency is needed.
 export const SITE_URL = 'https://www.sparkleancleaners.com';
-export const DEFAULT_OG_IMAGE = '/img/professional-house-cleaning-lafayette.webp';
+// Same 1200x630 share image on every route.
+export const OG_IMAGE = '/img/sparklean-og-image.png';
 
 export default function Seo({
   title,
   description,
   path = '/',
-  image = DEFAULT_OG_IMAGE,
   type = 'website',
   noindex = false,
   schema,
 }) {
   const url = `${SITE_URL}${path === '/' ? '/' : path}`;
-  const imageUrl = image.startsWith('http') ? image : `${SITE_URL}${image}`;
+  const imageUrl = `${SITE_URL}${OG_IMAGE}`;
   const schemas = schema ? (Array.isArray(schema) ? schema : [schema]) : [];
 
   return (

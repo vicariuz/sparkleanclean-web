@@ -19,4 +19,3 @@ If you are developing a production application, we recommend using TypeScript wi
 
 - Per-route `<title>`, description, canonical and Open Graph tags come from `src/Seo.jsx` (React 19 head hoisting). JSON-LD builders are in `src/schema.js`; the global `LocalBusiness` node lives in `index.html`.
 - **Pending:** pre-render the 11 routes at build time (e.g. `vite-react-ssg`) so crawlers and social bots that don't run JavaScript see the per-route tags. Currently they are injected client-side.
-- **Pending:** a 1200×630 branded Open Graph image (the og:image fallback is a product photo).
