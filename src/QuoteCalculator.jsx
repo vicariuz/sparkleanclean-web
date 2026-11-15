@@ -74,6 +74,12 @@ const COM_ADDONS = [
   { key: "supplies",    label: "Supply restocking",     price: 30 },
 ];
 
+// Prices are shown as a range (-8% / +12%) rounded to the nearest $10, since
+// the final price is confirmed after a walkthrough.
+const roundTo = (n, step) => Math.round(n / step) * step;
+const priceRange = (total, step = 10) => [roundTo(total * 0.92, step), roundTo(total * 1.12, step)];
+const fmtRange = ([lo, hi]) => `$${lo} – $${hi}`;
+
 function OptionCard({ label, sub, selected, onClick }) {
   return (
     <button
@@ -174,18 +180,19 @@ export default function QuoteCalculator({ onBooking }) {
       .map((k) => RES_ADDONS.find((a) => a.key === k)?.label)
       .filter(Boolean).join(", ");
 
-    priceText = `$${total}`;
+    const range = fmtRange(priceRange(total));
+    priceText = range;
     labelText = `${svcObj?.label} · ${sizeLabel} · ${freqLabel}`;
 
     breakdown.push({ label: "Base price", value: `$${base}` });
     if (disc > 0) breakdown.push({ label: `Recurring discount (${Math.round(disc * 100)}%)`, value: `-$${savings}`, green: true });
     if (extrasTotal > 0) breakdown.push({ label: "Add-ons", value: `+$${extrasTotal}` });
-    breakdown.push({ label: "Estimated total", value: `$${total}`, bold: true });
+    breakdown.push({ label: "Estimated range", value: range, bold: true });
     if (disc > 0) breakdown.push({ label: "You save per visit", value: `$${savings}`, green: true, small: true });
 
     bookingData = {
       service: svcObj?.formVal || "Residential Cleaning",
-      message: `Quote from calculator:\n- Service: ${svcObj?.label}\n- Home size: ${sizeLabel}\n- Frequency: ${freqLabel}${addonList ? `\n- Add-ons: ${addonList}` : ""}\n- Estimated price: $${total}${disc > 0 ? ` (saving $${savings}/visit)` : ""}\n\nPlease confirm availability and final pricing.`,
+      message: `Quote from calculator:\n- Service: ${svcObj?.label}\n- Home size: ${sizeLabel}\n- Frequency: ${freqLabel}${addonList ? `\n- Add-ons: ${addonList}` : ""}\n- Estimated price: ${range}${disc > 0 ? ` (saving $${savings}/visit)` : ""}\n\nPlease confirm availability and final pricing.`,
     };
 
   } else {
@@ -193,25 +200,26 @@ export default function QuoteCalculator({ onBooking }) {
     const extrasTotal = Object.values(comExtras).reduce((a, b) => a + b, 0);
     const total       = base + extrasTotal;
     const visits      = COM_VISITS[comFreq];
-    const perVisit    = Math.round(total / visits);
+    const perVisitRange = fmtRange(priceRange(total / visits, 5));
     const sizeLabel   = COM_SIZES.find((s) => s.val === comSize)?.label;
     const freqLabel   = COM_FREQS.find((f) => f.val === comFreq)?.label;
     const addonList   = Object.keys(comExtras)
       .map((k) => COM_ADDONS.find((a) => a.key === k)?.label)
       .filter(Boolean).join(", ");
 
-    priceText = `$${total}/mo`;
-    rangeText = `$${perVisit} per visit · ${visits} visit${visits > 1 ? "s" : ""}/month`;
+    const range = fmtRange(priceRange(total));
+    priceText = `${range}/mo`;
+    rangeText = `${perVisitRange} per visit · ${visits} visit${visits > 1 ? "s" : ""}/month`;
     labelText = `${sizeLabel} · ${freqLabel}`;
 
     breakdown.push({ label: "Base monthly rate", value: `$${base}` });
     if (extrasTotal > 0) breakdown.push({ label: "Add-on services", value: `+$${extrasTotal}` });
-    breakdown.push({ label: "Monthly total", value: `$${total}`, bold: true });
-    breakdown.push({ label: "Cost per visit", value: `$${perVisit}`, small: true });
+    breakdown.push({ label: "Estimated monthly range", value: `${range}/mo`, bold: true });
+    breakdown.push({ label: "Est. cost per visit", value: perVisitRange, small: true });
 
     bookingData = {
       service: "Commercial Cleaning",
-      message: `Quote from calculator:\n- Type: Commercial cleaning\n- Office size: ${sizeLabel}\n- Frequency: ${freqLabel}${addonList ? `\n- Add-ons: ${addonList}` : ""}\n- Estimated monthly: $${total} ($${perVisit}/visit)\n\nPlease confirm availability and final pricing.`,
+      message: `Quote from calculator:\n- Type: Commercial cleaning\n- Office size: ${sizeLabel}\n- Frequency: ${freqLabel}${addonList ? `\n- Add-ons: ${addonList}` : ""}\n- Estimated monthly: ${range} (${perVisitRange}/visit)\n\nPlease confirm availability and final pricing.`,
     };
   }
 
@@ -329,9 +337,10 @@ export default function QuoteCalculator({ onBooking }) {
               <p className="text-4xl font-medium text-gray-900">{priceText}</p>
               {rangeText && <p className="text-sm text-gray-500 mt-1">{rangeText}</p>}
               <p className="text-sm text-gray-500 mt-1">{labelText}</p>
+              <p className="text-xs text-gray-500 mt-2">Final price confirmed after a walkthrough</p>
             </div>
             <span className="text-xs px-3 py-1 rounded-full bg-[#E1F5EE] text-[#085041]">
-              Instant estimate
+              Estimate
             </span>
           </div>
 
@@ -360,14 +369,14 @@ export default function QuoteCalculator({ onBooking }) {
             </button>
             <button
               onClick={handleBook}
-              className="border border-gray-200 hover:border-gray-400 text-gray-800 text-sm py-2.5 rounded-lg text-center transition-colors"
+              className="bg-[#1D9E75] hover:bg-[#0F6E56] text-white text-sm font-medium py-2.5 rounded-lg text-center transition-colors"
             >
               Get custom quote
             </button>
           </div>
 
-          <p className="text-xs text-gray-400 text-center mt-3">
-            Final price confirmed after a quick call · (337) 554-0468
+          <p className="text-sm text-gray-500 text-center mt-4">
+            Questions? Call <a href="tel:3375540468" className="font-medium text-[#0F6E56] hover:underline">(337) 554-0468</a>
           </p>
         </div>
 

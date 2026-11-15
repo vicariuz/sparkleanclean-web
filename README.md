@@ -14,3 +14,9 @@ The React Compiler is not enabled on this template because of its impact on dev 
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## SEO notes
+
+- Per-route `<title>`, description, canonical and Open Graph tags come from `src/Seo.jsx` (React 19 head hoisting). JSON-LD builders are in `src/schema.js`; the global `LocalBusiness` node lives in `index.html`.
+- **Pending:** pre-render the 11 routes at build time (e.g. `vite-react-ssg`) so crawlers and social bots that don't run JavaScript see the per-route tags. Currently they are injected client-side.
+- **Pending:** a 1200×630 branded Open Graph image (the og:image fallback is a product photo).
