@@ -2,6 +2,7 @@ import React from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { Clock, ArrowLeft, Tag, Phone, Mail } from 'lucide-react';
 import { blogPosts } from './blogData';
+import Seo from './Seo';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -10,6 +11,7 @@ export default function BlogPost() {
   if (!post) {
     return (
       <div className="min-h-screen flex items-center justify-center bg-white">
+        <Seo title="Article Not Found | Sparklean" path={`/blog/${slug}`} noindex />
         <div className="text-center">
           <h1 className="text-4xl font-bold text-gray-900 mb-4">Article Not Found</h1>
           <Link to="/blog" className="text-green-600 hover:text-green-700 font-semibold text-lg">
@@ -20,10 +22,20 @@ export default function BlogPost() {
     );
   }
 
+  const brandedTitle = `${post.title} | Sparklean`;
+  const seoTitle = post.seoTitle || (brandedTitle.length <= 60 ? brandedTitle : post.title);
+
   const relatedPosts = blogPosts.filter((p) => p.id !== post.id).slice(0, 2);
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title={seoTitle}
+        description={post.excerpt}
+        path={`/blog/${post.slug}`}
+        image={post.image}
+        type="article"
+      />
 
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">

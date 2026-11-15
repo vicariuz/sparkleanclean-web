@@ -3,6 +3,7 @@ import QuoteCalculator from './QuoteCalculator';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { Sparkles, Home, Building2, Wand2, TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
+import Seo from './Seo';
 
 export default function SparkleanLanding() {
 
@@ -131,6 +132,11 @@ export default function SparkleanLanding() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="House & Office Cleaning in Lafayette, LA | Sparklean"
+        description="Trusted house and office cleaning in Lafayette, LA. Residential, commercial, deep and move-out cleaning with eco-friendly products. Free quote."
+        path="/"
+      />
       {/* Decorative Background Pattern */}
       <div className="fixed inset-0 -z-10 opacity-5">
         <div className="absolute inset-0" style={{

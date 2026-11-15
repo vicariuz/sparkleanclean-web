@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock, Shield, DollarSign, FileCheck } from 'lucide-react';
+import Seo from './Seo';
 
 export default function MoveOutCleaning() {
   const [formResult, setFormResult] = useState("");
@@ -49,6 +50,12 @@ export default function MoveOutCleaning() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Move-Out Cleaning Lafayette – Get Your Deposit Back"
+        description="Move-out and move-in cleaning in Lafayette, LA. Leave your rental spotless and protect your security deposit. Free quote: (337) 554-0468."
+        path="/move-out-cleaning-lafayette"
+        image="/img/move-out-cleaning-lafayette-louisiana.webp"
+      />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

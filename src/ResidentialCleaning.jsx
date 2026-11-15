@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Phone, Mail, CheckCircle, Star, MapPin, Clock, Sparkles, Shield, Leaf, DollarSign } from 'lucide-react';
+import Seo from './Seo';
 
 export default function ResidentialCleaning() {
   const [formResult, setFormResult] = useState("");
@@ -45,6 +46,12 @@ export default function ResidentialCleaning() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="House Cleaning Lafayette LA – Free Quote | Sparklean"
+        description="Reliable house cleaning in Lafayette, LA. One-time or recurring visits, eco-friendly products and an insured team. Get your free quote today."
+        path="/residential-cleaning-lafayette"
+        image="/img/residential-cleaning-lafayette-la.webp"
+      />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

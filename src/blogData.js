@@ -6,6 +6,7 @@ export const blogPosts = [
     excerpt: "Discover the best cleaning strategies to keep your Lafayette home spotless all year round, from fighting humidity to handling Louisiana mud.",
     category: "Tips & Tricks",
     date: "February 5, 2026",
+    isoDate: "2026-02-05",
     readTime: "5 min read",
     image: "/img/professional-house-cleaning-lafayette.webp",
     content: `
@@ -52,6 +53,8 @@ export const blogPosts = [
     excerpt: "A clean office boosts productivity and creates a great first impression. Learn the ideal deep cleaning schedule for commercial spaces in Lafayette, LA.",
     category: "Commercial Cleaning",
     date: "January 28, 2026",
+    isoDate: "2026-01-28",
+    seoTitle: "How Often to Deep Clean an Office in Lafayette | Sparklean",
     readTime: "4 min read",
     image: "/img/commercial-office-cleaning-lafayette.webp",
     content: `
@@ -86,6 +89,8 @@ export const blogPosts = [
     excerpt: "Moving out of your Lafayette rental? Use this comprehensive checklist to ensure you get your full security deposit back and leave the place spotless.",
     category: "Move-In/Move-Out",
     date: "January 15, 2026",
+    isoDate: "2026-01-15",
+    seoTitle: "Move-Out Cleaning Checklist for Lafayette Renters",
     readTime: "6 min read",
     image: "/img/move-out-cleaning-lafayette-louisiana.webp",
     content: `
@@ -153,6 +158,8 @@ export const blogPosts = [
     excerpt: "At Sparklean, we're committed to using environmentally safe products that protect your family, pets, and Louisiana's beautiful environment.",
     category: "Eco-Friendly",
     date: "January 5, 2026",
+    isoDate: "2026-01-05",
+    seoTitle: "Eco-Friendly Cleaning Products in Lafayette | Sparklean",
     readTime: "4 min read",
     image: "/img/deep-cleaning-service-lafayette.webp",
     content: `

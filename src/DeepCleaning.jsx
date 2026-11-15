@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Wand2, Phone, Mail, CheckCircle, Star, MapPin, Clock, Shield, Leaf, Sparkles } from 'lucide-react';
+import Seo from './Seo';
 
 export default function DeepCleaning() {
   const [formResult, setFormResult] = useState("");
@@ -49,6 +50,12 @@ export default function DeepCleaning() {
 
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Deep Cleaning Lafayette LA – Free Estimate | Sparklean"
+        description="Top-to-bottom deep cleaning for Lafayette homes and offices: appliances, baseboards, cabinets and more. Call (337) 554-0468 for a free estimate."
+        path="/deep-cleaning-lafayette"
+        image="/img/deep-cleaning-service-lafayette.webp"
+      />
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">

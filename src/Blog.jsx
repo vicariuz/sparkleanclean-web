@@ -2,10 +2,16 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Clock, ArrowRight, Tag } from 'lucide-react';
 import { blogPosts } from './blogData';
+import Seo from './Seo';
 
 export default function Blog() {
   return (
     <div className="min-h-screen bg-white">
+      <Seo
+        title="Cleaning Tips & Guides for Lafayette Homes | Sparklean"
+        description="Practical cleaning tips, checklists and guides for Lafayette homes and offices from the local Sparklean team."
+        path="/blog"
+      />
 
       {/* Header */}
       <header className="bg-white/95 backdrop-blur-sm shadow-sm sticky top-0 z-50">

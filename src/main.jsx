@@ -10,6 +10,7 @@ const ResidentialCleaning = lazy(() => import('./ResidentialCleaning.jsx'))
 const CommercialCleaning = lazy(() => import('./CommercialCleaning.jsx'))
 const DeepCleaning = lazy(() => import('./DeepCleaning.jsx'))
 const MoveOutCleaning = lazy(() => import('./MoveOutCleaning.jsx'))
+const NotFound = lazy(() => import('./NotFound.jsx'))
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
@@ -23,6 +24,7 @@ createRoot(document.getElementById('root')).render(
           <Route path="/commercial-cleaning-lafayette" element={<CommercialCleaning />} />
           <Route path="/deep-cleaning-lafayette" element={<DeepCleaning />} />
           <Route path="/move-out-cleaning-lafayette" element={<MoveOutCleaning />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </Suspense>
     </BrowserRouter>
