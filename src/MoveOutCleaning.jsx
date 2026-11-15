@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock, Shield, DollarSign, FileCheck } from 'lucide-react';
 import Seo from './Seo';
+import { serviceSchema } from './schema';
 
 export default function MoveOutCleaning() {
   const [formResult, setFormResult] = useState("");
@@ -54,6 +55,13 @@ export default function MoveOutCleaning() {
         title="Move-Out Cleaning Lafayette – Get Your Deposit Back"
         description="Move-out and move-in cleaning in Lafayette, LA. Leave your rental spotless and protect your security deposit. Free quote: (337) 554-0468."
         path="/move-out-cleaning-lafayette"
+        schema={serviceSchema({
+          name: "Move-Out Cleaning in Lafayette, LA",
+          serviceType: "Move-in and move-out cleaning",
+          description: "Move-out and move-in cleaning in Lafayette, LA to leave your rental spotless and protect your security deposit.",
+          path: "/move-out-cleaning-lafayette",
+          image: "/img/move-out-cleaning-lafayette-louisiana.webp",
+        })}
         image="/img/move-out-cleaning-lafayette-louisiana.webp"
       />
       {/* Header */}

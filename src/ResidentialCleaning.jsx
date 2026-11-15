@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Phone, Mail, CheckCircle, Star, MapPin, Clock, Sparkles, Shield, Leaf, DollarSign } from 'lucide-react';
 import Seo from './Seo';
+import { serviceSchema } from './schema';
 
 export default function ResidentialCleaning() {
   const [formResult, setFormResult] = useState("");
@@ -50,6 +51,13 @@ export default function ResidentialCleaning() {
         title="House Cleaning Lafayette LA – Free Quote | Sparklean"
         description="Reliable house cleaning in Lafayette, LA. One-time or recurring visits, eco-friendly products and an insured team. Get your free quote today."
         path="/residential-cleaning-lafayette"
+        schema={serviceSchema({
+          name: "Residential House Cleaning in Lafayette, LA",
+          serviceType: "House cleaning",
+          description: "Reliable house cleaning in Lafayette, LA. One-time or recurring visits, eco-friendly products and an insured team.",
+          path: "/residential-cleaning-lafayette",
+          image: "/img/residential-cleaning-lafayette-la.webp",
+        })}
         image="/img/residential-cleaning-lafayette-la.webp"
       />
       {/* Header */}

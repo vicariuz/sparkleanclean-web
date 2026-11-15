@@ -4,6 +4,30 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 import { Sparkles, Home, Building2, Wand2, TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock } from 'lucide-react';
 import Seo from './Seo';
+import { faqSchema } from './schema';
+
+const faqs = [
+  {
+    q: "How much does house cleaning cost in Lafayette, LA?",
+    a: "Our residential cleaning services in Lafayette start at competitive rates based on home size and cleaning needs. Contact us at (337) 554-0468 for a free customized quote for your Lafayette home.",
+  },
+  {
+    q: "Do you serve areas outside Lafayette?",
+    a: "Yes! Sparklean serves Lafayette, Scott, Youngsville, Broussard, Carencro, Duson, Maurice, Breaux Bridge, St. Martinville, and Cade in the Acadiana region.",
+  },
+  {
+    q: "Are your cleaning products eco-friendly?",
+    a: "Absolutely! All Sparklean cleaning products are eco-friendly, non-toxic, and safe for children, pets, and the Louisiana environment while being tough on dirt and bacteria.",
+  },
+  {
+    q: "How do I schedule a cleaning service in Lafayette?",
+    a: "Simply call us at (337) 554-0468, fill out our online quote form, or email contact@sparkleancleaners.com. We offer flexible scheduling including evenings and weekends.",
+  },
+  {
+    q: "What's included in your deep cleaning service?",
+    a: "Our Lafayette deep cleaning service includes thorough cleaning of all rooms, appliances, baseboards, windows, ceiling fans, inside cabinets, and hard-to-reach areas that regular cleaning might miss.",
+  },
+];
 
 export default function SparkleanLanding() {
 
@@ -136,6 +160,7 @@ export default function SparkleanLanding() {
         title="House & Office Cleaning in Lafayette, LA | Sparklean"
         description="Trusted house and office cleaning in Lafayette, LA. Residential, commercial, deep and move-out cleaning with eco-friendly products. Free quote."
         path="/"
+        schema={faqSchema(faqs)}
       />
       {/* Decorative Background Pattern */}
       <div className="fixed inset-0 -z-10 opacity-5">
@@ -705,50 +730,16 @@ export default function SparkleanLanding() {
           </h2>
 
           <div className="space-y-6">
-            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                How much does house cleaning cost in Lafayette, LA?
-              </h3>
-              <p className="text-gray-700">
-                Our residential cleaning services in Lafayette start at competitive rates based on home size and cleaning needs. Contact us at (337) 554-0468 for a free customized quote for your Lafayette home.
-              </p>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Do you serve areas outside Lafayette?
-              </h3>
-              <p className="text-gray-700">
-                Yes! Sparklean serves Lafayette, Scott, Youngsville, Broussard, Carencro, Duson, Maurice, Breaux Bridge, St. Martinville, and Cade in the Acadiana region.
-              </p>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Are your cleaning products eco-friendly?
-              </h3>
-              <p className="text-gray-700">
-                Absolutely! All Sparklean cleaning products are eco-friendly, non-toxic, and safe for children, pets, and the Louisiana environment while being tough on dirt and bacteria.
-              </p>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                How do I schedule a cleaning service in Lafayette?
-              </h3>
-              <p className="text-gray-700">
-                Simply call us at (337) 554-0468, fill out our online quote form, or email contact@sparkleancleaners.com. We offer flexible scheduling including evenings and weekends.
-              </p>
-            </div>
-
-            <div className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                What's included in your deep cleaning service?
-              </h3>
-              <p className="text-gray-700">
-                Our Lafayette deep cleaning service includes thorough cleaning of all rooms, appliances, baseboards, windows, ceiling fans, inside cabinets, and hard-to-reach areas that regular cleaning might miss.
-              </p>
-            </div>
+            {faqs.map((item) => (
+              <div key={item.q} className="bg-green-50 rounded-xl p-6 border-l-4 border-green-600">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  {item.q}
+                </h3>
+                <p className="text-gray-700">
+                  {item.a}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

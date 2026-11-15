@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Wand2, Phone, Mail, CheckCircle, Star, MapPin, Clock, Shield, Leaf, Sparkles } from 'lucide-react';
 import Seo from './Seo';
+import { serviceSchema } from './schema';
 
 export default function DeepCleaning() {
   const [formResult, setFormResult] = useState("");
@@ -54,6 +55,13 @@ export default function DeepCleaning() {
         title="Deep Cleaning Lafayette LA – Free Estimate | Sparklean"
         description="Top-to-bottom deep cleaning for Lafayette homes and offices: appliances, baseboards, cabinets and more. Call (337) 554-0468 for a free estimate."
         path="/deep-cleaning-lafayette"
+        schema={serviceSchema({
+          name: "Deep Cleaning in Lafayette, LA",
+          serviceType: "Deep cleaning",
+          description: "Top-to-bottom deep cleaning for Lafayette homes and offices: appliances, baseboards, cabinets and hard-to-reach areas.",
+          path: "/deep-cleaning-lafayette",
+          image: "/img/deep-cleaning-service-lafayette.webp",
+        })}
         image="/img/deep-cleaning-service-lafayette.webp"
       />
       {/* Header */}

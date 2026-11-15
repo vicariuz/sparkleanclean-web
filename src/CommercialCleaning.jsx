@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Building2, Phone, Mail, CheckCircle, Star, MapPin, Clock, Shield, Leaf, DollarSign, Users } from 'lucide-react';
 import Seo from './Seo';
+import { serviceSchema } from './schema';
 
 export default function CommercialCleaning() {
   const [formResult, setFormResult] = useState("");
@@ -50,6 +51,13 @@ export default function CommercialCleaning() {
         title="Commercial Cleaning Lafayette LA – Free Quote | Sparklean"
         description="Office and commercial cleaning for Lafayette businesses. Daily, weekly or monthly service from an insured crew using eco-friendly products."
         path="/commercial-cleaning-lafayette"
+        schema={serviceSchema({
+          name: "Commercial Office Cleaning in Lafayette, LA",
+          serviceType: "Commercial cleaning",
+          description: "Office and commercial cleaning for Lafayette businesses. Daily, weekly or monthly service using eco-friendly products.",
+          path: "/commercial-cleaning-lafayette",
+          image: "/img/commercial-office-cleaning-lafayette.webp",
+        })}
         image="/img/commercial-office-cleaning-lafayette.webp"
       />
       {/* Header */}

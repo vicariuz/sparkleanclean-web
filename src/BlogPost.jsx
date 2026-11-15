@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import { Clock, ArrowLeft, Tag, Phone, Mail } from 'lucide-react';
 import { blogPosts } from './blogData';
 import Seo from './Seo';
+import { blogPostingSchema } from './schema';
 
 export default function BlogPost() {
   const { slug } = useParams();
@@ -35,6 +36,7 @@ export default function BlogPost() {
         path={`/blog/${post.slug}`}
         image={post.image}
         type="article"
+        schema={blogPostingSchema(post)}
       />
 
       {/* Header */}
