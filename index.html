@@ -26,7 +26,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
   </noscript>
 
-  <link rel="preload" as="image" href="/img/office-cleaning-service-background.webp" fetchpriority="high">
+  <!-- Hero background (see .hero-bg in src/index.css; keep the 768px breakpoint in sync) -->
+  <link rel="preload" as="image" href="/img/office-cleaning-service-background-768.webp" media="(max-width: 768px)" fetchpriority="high">
+  <link rel="preload" as="image" href="/img/office-cleaning-service-background.webp" media="(min-width: 769px)" fetchpriority="high">
 
   <!-- Title, description, canonical, Open Graph and Twitter tags are set per route by src/Seo.jsx -->
   <meta name="author" content="Sparklean Cleaning Services" />

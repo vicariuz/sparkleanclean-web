@@ -9,3 +9,15 @@
     font-family: 'Inter', sans-serif;
   }
 }
+/* Home hero background: 768px-wide file on mobile, full-size on desktop.
+   Breakpoint must match the media attributes on the preload links in index.html. */
+.hero-bg {
+  background-image: url("/img/office-cleaning-service-background.webp");
+  background-size: cover;
+  background-position: center;
+}
+@media (max-width: 768px) {
+  .hero-bg {
+    background-image: url("/img/office-cleaning-service-background-768.webp");
+  }
+}

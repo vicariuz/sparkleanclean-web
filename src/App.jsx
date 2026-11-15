@@ -251,15 +251,7 @@ export default function SparkleanLanding() {
         {/* Background with gradient overlay */}
         <div className="absolute inset-0 bg-gradient-to-br from-green-600/90 via-green-700/90 to-green-800/90"></div>
         <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0" style={{
-            backgroundImage: `url('/img/office-cleaning-service-background.webp')`,
-            backgroundSize: 'cover',
-            fetchpriority: "high",
-            width: "1920",
-            height: "1080",
-            loading: "eager",
-            backgroundPosition: 'center'
-          }}></div>
+          <div className="absolute inset-0 hero-bg"></div>
         </div>
 
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
