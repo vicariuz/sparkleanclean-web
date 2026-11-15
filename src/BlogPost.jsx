@@ -134,6 +134,9 @@ export default function BlogPost() {
         <div className="mt-12 bg-gradient-to-br from-green-600 to-green-700 rounded-2xl p-8 text-white text-center">
           <h3 className="text-2xl font-bold mb-3">Need Professional Cleaning Services?</h3>
           <p className="text-green-100 mb-6">Contact Sparklean today for your free quote in Lafayette, LA!</p>
+          <p className="text-green-100 mb-6">
+            Learn more about our <Link to={post.serviceLink} className="underline font-semibold text-white hover:text-green-50">{post.serviceLabel} service in Lafayette</Link>.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="tel:3375540468" className="flex items-center justify-center space-x-2 bg-white text-green-700 px-6 py-3 rounded-lg font-semibold hover:bg-green-50 transition">
               <Phone className="w-5 h-5" />

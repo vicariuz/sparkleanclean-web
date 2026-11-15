@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Wand2, Phone, Mail, CheckCircle, Star, MapPin, Clock, Shield, Leaf, Sparkles } from 'lucide-react';
 import Seo from './Seo';
+import RelatedServices from './RelatedServices';
 import { serviceSchema } from './schema';
 
 export default function DeepCleaning() {
@@ -314,6 +315,8 @@ export default function DeepCleaning() {
           </div>
         </div>
       </section>
+
+      <RelatedServices current="/deep-cleaning-lafayette" />
 
       {/* Contact Form */}
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">

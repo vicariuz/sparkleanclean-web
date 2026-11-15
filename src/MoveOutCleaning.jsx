@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { TruckIcon, Phone, Mail, CheckCircle, Star, MapPin, Clock, Shield, DollarSign, FileCheck } from 'lucide-react';
 import Seo from './Seo';
+import RelatedServices from './RelatedServices';
 import { serviceSchema } from './schema';
 
 export default function MoveOutCleaning() {
@@ -344,6 +345,8 @@ export default function MoveOutCleaning() {
           </div>
         </div>
       </section>
+
+      <RelatedServices current="/move-out-cleaning-lafayette" />
 
       {/* Contact Form */}
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">

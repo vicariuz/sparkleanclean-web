@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Home, Phone, Mail, CheckCircle, Star, MapPin, Clock, Sparkles, Shield, Leaf, DollarSign } from 'lucide-react';
 import Seo from './Seo';
+import RelatedServices from './RelatedServices';
 import { serviceSchema } from './schema';
 
 export default function ResidentialCleaning() {
@@ -303,6 +304,8 @@ export default function ResidentialCleaning() {
         </div>
       </section>
 
+      <RelatedServices current="/residential-cleaning-lafayette" />
+
       {/* Contact Form */}
       <section id="contact" className="py-20 bg-gradient-to-br from-gray-50 to-green-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -420,6 +423,7 @@ export default function ResidentialCleaning() {
                 <li><Link to="/blog" className="text-gray-400 hover:text-green-400 transition">Blog</Link></li>
                 <li><Link to="/commercial-cleaning-lafayette" className="text-gray-400 hover:text-green-400 transition">Commercial Cleaning</Link></li>
                 <li><Link to="/deep-cleaning-lafayette" className="text-gray-400 hover:text-green-400 transition">Deep Cleaning</Link></li>
+                <li><Link to="/move-out-cleaning-lafayette" className="text-gray-400 hover:text-green-400 transition">Move-Out Cleaning</Link></li>
               </ul>
             </div>
             <div>

@@ -2,6 +2,8 @@ export const blogPosts = [
   {
     id: 1,
     slug: "top-10-cleaning-tips-lafayette-homes",
+    serviceLink: "/residential-cleaning-lafayette",
+    serviceLabel: "house cleaning",
     title: "Top 10 Cleaning Tips for Lafayette Homes",
     excerpt: "Discover the best cleaning strategies to keep your Lafayette home spotless all year round, from fighting humidity to handling Louisiana mud.",
     category: "Tips & Tricks",
@@ -13,7 +15,6 @@ export const blogPosts = [
     imageWidth: 1000,
     imageHeight: 1500,
     content: `
-      <h2>Top 10 Cleaning Tips for Lafayette Homes</h2>
       <p>Living in Lafayette, Louisiana comes with its own unique cleaning challenges. From high humidity to seasonal pollen, keeping your home clean requires some specific strategies. Here are our top 10 tips from the professionals at Sparklean Cleaning Services.</p>
 
       <h3>1. Fight Humidity with Proper Ventilation</h3>
@@ -52,6 +53,8 @@ export const blogPosts = [
   {
     id: 2,
     slug: "how-often-deep-clean-office-lafayette",
+    serviceLink: "/commercial-cleaning-lafayette",
+    serviceLabel: "commercial cleaning",
     title: "How Often Should You Deep Clean Your Office in Lafayette?",
     excerpt: "A clean office boosts productivity and creates a great first impression. Learn the ideal deep cleaning schedule for commercial spaces in Lafayette, LA.",
     category: "Commercial Cleaning",
@@ -64,7 +67,6 @@ export const blogPosts = [
     imageWidth: 1000,
     imageHeight: 1500,
     content: `
-      <h2>How Often Should You Deep Clean Your Office in Lafayette?</h2>
       <p>Maintaining a clean office environment is crucial for employee productivity, health, and making a great impression on clients. But how often should you schedule a professional deep clean? At Sparklean Cleaning Services, we've developed guidelines specifically for Lafayette businesses.</p>
 
       <h3>Daily Cleaning Tasks</h3>
@@ -91,6 +93,8 @@ export const blogPosts = [
   {
     id: 3,
     slug: "move-out-cleaning-checklist-lafayette",
+    serviceLink: "/move-out-cleaning-lafayette",
+    serviceLabel: "move-out cleaning",
     title: "The Ultimate Move-Out Cleaning Checklist for Lafayette Renters",
     excerpt: "Moving out of your Lafayette rental? Use this comprehensive checklist to ensure you get your full security deposit back and leave the place spotless.",
     category: "Move-In/Move-Out",
@@ -103,7 +107,6 @@ export const blogPosts = [
     imageWidth: 800,
     imageHeight: 533,
     content: `
-      <h2>The Ultimate Move-Out Cleaning Checklist for Lafayette Renters</h2>
       <p>Moving out is stressful enough without worrying about losing your security deposit. As Lafayette's trusted cleaning service, we've helped hundreds of renters get their full deposit back. Here's our comprehensive move-out cleaning checklist.</p>
 
       <h3>Kitchen</h3>
@@ -163,6 +166,8 @@ export const blogPosts = [
   {
     id: 4,
     slug: "eco-friendly-cleaning-products-lafayette",
+    serviceLink: "/deep-cleaning-lafayette",
+    serviceLabel: "deep cleaning",
     title: "Why We Use Eco-Friendly Cleaning Products in Lafayette",
     excerpt: "At Sparklean, we're committed to using environmentally safe products that protect your family, pets, and Louisiana's beautiful environment.",
     category: "Eco-Friendly",
@@ -175,7 +180,6 @@ export const blogPosts = [
     imageWidth: 800,
     imageHeight: 1200,
     content: `
-      <h2>Why We Use Eco-Friendly Cleaning Products in Lafayette</h2>
       <p>At Sparklean Cleaning Services, we made the commitment early on to use only eco-friendly, plant-based cleaning products. Here's why this matters for you, your family, and Louisiana's environment.</p>
 
       <h3>Safe for Your Family and Pets</h3>
