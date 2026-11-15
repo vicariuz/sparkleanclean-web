@@ -165,6 +165,7 @@ export default function QuoteCalculator({ onBooking }) {
 
   let priceText = "", rangeText = "", labelText = "", breakdown = [];
   let bookingData = {};
+  let trackData = {};
 
   if (mode === "residential") {
     const base        = RES_PRICES[resService][resSize];
@@ -189,6 +190,8 @@ export default function QuoteCalculator({ onBooking }) {
     if (extrasTotal > 0) breakdown.push({ label: "Add-ons", value: `+$${extrasTotal}` });
     breakdown.push({ label: "Estimated range", value: range, bold: true });
     if (disc > 0) breakdown.push({ label: "You save per visit", value: `$${savings}`, green: true, small: true });
+
+    trackData = { service_type: svcObj?.label, quote_mode: "residential", price_range: range };
 
     bookingData = {
       service: svcObj?.formVal || "Residential Cleaning",
@@ -217,6 +220,8 @@ export default function QuoteCalculator({ onBooking }) {
     breakdown.push({ label: "Estimated monthly range", value: `${range}/mo`, bold: true });
     breakdown.push({ label: "Est. cost per visit", value: perVisitRange, small: true });
 
+    trackData = { service_type: "Commercial cleaning", quote_mode: "commercial", price_range: `${range}/mo` };
+
     bookingData = {
       service: "Commercial Cleaning",
       message: `Quote from calculator:\n- Type: Commercial cleaning\n- Office size: ${sizeLabel}\n- Frequency: ${freqLabel}${addonList ? `\n- Add-ons: ${addonList}` : ""}\n- Estimated monthly: ${range} (${perVisitRange}/visit)\n\nPlease confirm availability and final pricing.`,
@@ -224,7 +229,8 @@ export default function QuoteCalculator({ onBooking }) {
   }
 
   // Sube datos al padre y hace scroll al formulario
-  function handleBook() {
+  function handleBook(track = false) {
+    if (track && window.gtag) window.gtag("event", "quote_calculator_used", trackData);
     if (onBooking) onBooking(bookingData);
     setTimeout(() => {
       const el = document.getElementById("contact");
@@ -362,13 +368,13 @@ export default function QuoteCalculator({ onBooking }) {
 
           <div className="grid grid-cols-2 gap-3 mt-5">
             <button
-              onClick={handleBook}
+              onClick={() => handleBook(true)}
               className="bg-[#1D9E75] hover:bg-[#0F6E56] text-white text-sm font-medium py-2.5 rounded-lg text-center transition-colors"
             >
               Book this cleaning
             </button>
             <button
-              onClick={handleBook}
+              onClick={() => handleBook()}
               className="bg-[#1D9E75] hover:bg-[#0F6E56] text-white text-sm font-medium py-2.5 rounded-lg text-center transition-colors"
             >
               Get custom quote

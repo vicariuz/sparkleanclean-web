@@ -55,6 +55,15 @@ export default function SparkleanLanding() {
     const data = await response.json();
     if (data.success) {
       setFormResult("success");
+
+      // GA4 conversion (mark generate_lead as a Key Event in GA4)
+      if (window.gtag) {
+        window.gtag('event', 'generate_lead', {
+          event_category: 'form',
+          event_label: formData.get('service') || 'not specified'
+        });
+      }
+
       event.target.reset();
 
       // Notifica a Make.com
