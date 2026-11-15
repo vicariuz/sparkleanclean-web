@@ -42,7 +42,7 @@ export default function BlogPost() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/img/sparklean-cleaning-logo-lafayette.webp" alt="Sparklean Logo" className="h-16 w-auto" />
+              <img src="/img/sparklean-cleaning-logo-lafayette.webp" alt="Sparklean Cleaning Services Lafayette LA logo" width="200" height="48" className="h-16 w-auto" />
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <Link to="/" className="text-gray-700 hover:text-green-600 transition font-medium">Home</Link>
@@ -58,7 +58,10 @@ export default function BlogPost() {
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/20 z-10"></div>
         <img
           src={post.image}
-          alt={post.title}
+          alt={post.imageAlt}
+          width={post.imageWidth}
+          height={post.imageHeight}
+          fetchPriority="high"
           className="w-full h-full object-cover"
         />
         <div className="absolute bottom-0 left-0 right-0 z-20 p-8 max-w-4xl mx-auto">
@@ -152,7 +155,10 @@ export default function BlogPost() {
                 <div className="h-48 overflow-hidden">
                   <img
                     src={related.image}
-                    alt={related.title}
+                    alt={related.imageAlt}
+                    width={related.imageWidth}
+                    height={related.imageHeight}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>

@@ -63,7 +63,9 @@ export default function MoveOutCleaning() {
             <Link to="/" className="flex items-center space-x-3">
               <img
                 src="/img/sparklean-cleaning-logo-lafayette.webp"
-                alt="Sparklean Cleaning Services Lafayette"
+                alt="Sparklean Cleaning Services Lafayette LA logo"
+                width="200"
+                height="48"
                 className="h-16 w-auto"
               />
             </Link>
@@ -473,7 +475,9 @@ export default function MoveOutCleaning() {
             <div>
               <img
                 src="/img/sparklean-logo-white.webp"
-                alt="Sparklean"
+                alt="Sparklean Cleaning Services Lafayette LA logo"
+                width="341"
+                height="102"
                 className="h-16 w-auto mb-4"
                 loading="lazy"
               />

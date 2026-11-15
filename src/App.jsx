@@ -81,17 +81,17 @@ export default function SparkleanLanding() {
       width: "800",
       height: "600",
       link: "/residential-cleaning-lafayette",
-      alt: "Professional residential house cleaning service in Lafayette Louisiana with eco-friendly products"
+      alt: "Gloved hand cleaning a mirror – residential house cleaning in Lafayette, LA"
     },
     {
       icon: <Building2 className="w-8 h-8" />,
       title: "Commercial Office Cleaning",
       description: "Professional office cleaning solutions for Lafayette businesses and commercial spaces. Reliable and affordable.",
       image: "/img/commercial-office-cleaning-lafayette.webp",
-      width: "800",
-      height: "600",
+      width: "1000",
+      height: "1500",
       link: "/commercial-cleaning-lafayette",
-      alt: "Commercial office cleaning services for businesses in Lafayette LA"
+      alt: "Cleaning crew washing office windows – commercial cleaning in Lafayette, LA"
     },
     {
       icon: <Wand2 className="w-8 h-8" />,
@@ -99,9 +99,9 @@ export default function SparkleanLanding() {
       description: "Intensive deep cleaning that reaches every corner and surface of your Lafayette home or business.",
       image: "/img/deep-cleaning-service-lafayette.webp",
       width: "800",
-      height: "600",
+      height: "1200",
       link: "/deep-cleaning-lafayette",
-      alt: "Deep cleaning service Lafayette Louisiana - thorough home and office cleaning"
+      alt: "Squeegee cleaning a mirror – deep cleaning service in Lafayette, LA"
     },
     {
       icon: <TruckIcon className="w-8 h-8" />,
@@ -109,9 +109,9 @@ export default function SparkleanLanding() {
       description: "Complete cleaning services for your moving transitions in Lafayette and surrounding areas.",
       image: "/img/move-out-cleaning-lafayette-louisiana.webp",
       width: "800",
-      height: "600",
+      height: "533",
       link: "/move-out-cleaning-lafayette",
-      alt: "Move-in move-out cleaning service Lafayette LA - professional moving transition cleaning"
+      alt: "Steam cleaning a tile floor – move-out cleaning service in Lafayette, LA"
     }
   ];
 
@@ -154,8 +154,8 @@ export default function SparkleanLanding() {
                 src="/img/sparklean-cleaning-logo-lafayette.webp"
                 alt="Sparklean Cleaning Services - Professional Cleaning Lafayette LA"
                 title="Sparklean Cleaning Services Lafayette Louisiana"
-                width="267"
-                height="64"
+                width="200"
+                height="48"
                 className="h-16 w-auto"
                 fetchPriority="high"
               />
@@ -296,6 +296,8 @@ export default function SparkleanLanding() {
                     src={service.image}
                     alt={service.alt}
                     title={service.title + " Lafayette Louisiana"}
+                    width={service.width}
+                    height={service.height}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -761,8 +763,8 @@ export default function SparkleanLanding() {
                 alt="Sparklean Cleaning Services Lafayette Louisiana logo"
                 title="Sparklean Professional Cleaning Lafayette"
                 className="h-16 w-auto mb-4"
-                width="267"
-                height="64"
+                width="341"
+                height="102"
                 loading="lazy"
               />
               <p className="text-gray-400">

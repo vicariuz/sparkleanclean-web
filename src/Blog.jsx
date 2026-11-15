@@ -18,7 +18,7 @@ export default function Blog() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <div className="flex justify-between items-center">
             <Link to="/" className="flex items-center space-x-3">
-              <img src="/img/sparklean-cleaning-logo-lafayette.webp" alt="Sparklean Logo" className="h-16 w-auto" />
+              <img src="/img/sparklean-cleaning-logo-lafayette.webp" alt="Sparklean Cleaning Services Lafayette LA logo" width="200" height="48" className="h-16 w-auto" />
             </Link>
             <div className="hidden md:flex items-center space-x-6">
               <Link to="/" className="text-gray-700 hover:text-green-600 transition font-medium">Home</Link>
@@ -49,7 +49,10 @@ export default function Blog() {
                 <div className="h-56 overflow-hidden">
                   <img
                     src={post.image}
-                    alt={post.title}
+                    alt={post.imageAlt}
+                    width={post.imageWidth}
+                    height={post.imageHeight}
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
                   />
                 </div>
